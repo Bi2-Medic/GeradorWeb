@@ -1,0 +1,13 @@
+.produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.titulo {
+    color: #ffffff;
+    font-size: 300%;
+    text-shadow: 0.5px 0.5px 1px black;
+    margin: 3% 0;
+}

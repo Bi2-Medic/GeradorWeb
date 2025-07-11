@@ -1,0 +1,31 @@
+.table {
+    text-align: center;
+    width: 80%;
+    border-radius: 1rem;
+    border-color: transparent;
+    box-shadow: 2.5px 3px 5px rgba(0, 0, 0, 0.349);
+    background-image: linear-gradient(to bottom right, #ffffff00 60%, #ffffff28 90%);
+    background-color: #ffffff09;
+    border-collapse: collapse;
+}
+
+.table th{
+    white-space: nowrap;
+    font-size: 18px;
+    padding: 18px;
+    color: rgb(240, 170, 78);
+    text-shadow: 0.5px 0.5px 2px black;
+}
+
+.table td {
+    padding:0.5rem;
+}
+
+tbody tr:last-child td {
+    padding-bottom: 1rem;
+}
+
+.acoes {
+    display: flex;
+    gap: 10%;
+}

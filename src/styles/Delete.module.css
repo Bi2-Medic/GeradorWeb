@@ -1,0 +1,13 @@
+.button {
+    width: 30px;
+    height: 30px;
+    border-radius: 0.4rem;
+    border-width: 0;
+    background-color: #ffffff69;
+    position: relative;
+    z-index: 1;   
+}
+
+.button:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+}
