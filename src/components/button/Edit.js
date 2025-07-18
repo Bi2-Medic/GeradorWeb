@@ -1,5 +1,5 @@
-import styles from '../styles/Edit.module.css'
-import editIcon from '../assets/edit.svg'
+import styles from '../../styles/Edit.module.css'
+import editIcon from '../../assets/edit.svg'
 
 function Edit({obj}){
 

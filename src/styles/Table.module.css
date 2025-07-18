@@ -21,6 +21,10 @@
     padding:0.5rem;
 }
 
+.table td {
+    text-align: center;
+}
+
 tbody tr:last-child td {
     padding-bottom: 1rem;
 }

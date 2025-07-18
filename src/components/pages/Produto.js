@@ -1,10 +1,18 @@
-import styles from '../styles/Produto.module.css'
-import Table from '../components/Table'
-import Add from '../components/Add'
+import styles from '../../styles/Produto.module.css'
+import Table from '../Table'
+import Add from '../button/Add'
+import ProdutoForm from '../form/ProdutoForm'
+import { useState } from 'react'
 
 function Produto(){
 
-    const headers = ['Código', 'Descrição', 'Marca', 'Anvisa', 'Qnt. padrão']
+    const header = [
+        {key: 'codigo', head: 'Código'},
+        {key: 'descricao', head: 'Descrição'},
+        {key: 'marca', head: 'Marca'},
+        {key: 'anvisa', head: 'Anvisa'},
+        {key: 'quantidade', head: 'Quantidade'},
+    ]
 
     const data = [
         { codigo: 'aaa', descricao: 'Canulassssssssssssssssssssssssss', marca: 'Renova', anvisa: '84848484', quantidade: '1' },
@@ -22,12 +30,14 @@ function Produto(){
         { codigo: 'aaa', descricao: 'Canula', marca: 'Renova', anvisa: '84848484', quantidade: '1' }
     ]
 
+    const [adicionarNovo, setAdicionarNovo] = useState(false)
 
     return (
         <div className={styles.produto}>
             <h2 className={styles.titulo}>Cadastro de produtos</h2>
-            <Add />
-            <Table head={headers} data={data}/>
+            {adicionarNovo && <ProdutoForm close={setAdicionarNovo}/>}
+            <Add onClick={setAdicionarNovo} text='Novo produto'/>
+            <Table head={header} data={data}/>
         </div>
     )
 }

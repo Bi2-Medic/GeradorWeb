@@ -1,4 +1,35 @@
 .pedido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.titulo {
+    color: #ffffff;
+    font-size: 300%;
+    text-shadow: 0.5px 0.5px 1px black;
+    margin: 3% 0;
+}
+
+.filtro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    margin: 20px 0;
+}
+
+.filtro * {
+    margin: 0 10px;
+}
+
+.filtro input {
+    background-color: rgba(129, 62, 17, 0.452);
+    border: 1px solid gray;
+    border-radius: 1rem;
+    width: 20%;
+    height: 25px;
     text-align: center;
-    justify-items: center;
+    color: white;
 }

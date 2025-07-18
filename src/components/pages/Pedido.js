@@ -1,25 +1,35 @@
 import { useState } from 'react';
-import Table from '../components/Table'
-import styles from '../styles/Pedido.module.css'
+import Table from '../Table'
+import styles from '../../styles/Pedido.module.css'
 
 function Pedido(){
 
     const [dtI, setDtInicial] = useState(null)
     const [dtF, setDtFinal] = useState(null)
 
+    const header = [
+        {key: 'data', head: 'Data de criação'},
+        {key: 'cpf', head: 'CPF'},
+        {key: 'funcionario', head: 'Colaborador de criação'},
+    ]
+
+    const data = [
+        {data: '01/01/2025', cpf: '123456789', funcionario: 'Fulano'},
+        {data: '29/06/2025', cpf: '123456789', funcionario: 'Beltrano'},
+        {data: '13/07/2025', cpf: '123456789', funcionario: 'Ciclano'},
+    ]
+
     return (
         <div className={styles.pedido}>
-            <h2>Pedidos Gerados</h2>
-            <div>
-                <h3>Filtro</h3>
+            <h2 className={styles.titulo}>Pedidos Gerados</h2>
+            <h3>Filtro</h3>
+            <div className={styles.filtro}>
                 <label>Data inicial:</label>
                 <input type='date' onChange={(e) => setDtInicial(new Date(e.target.value))}></input>
                 <label>Data final:</label>
                 <input type='date' onChange={(e) => setDtFinal(new Date(e.target.value))}></input>
-                <p>{dtI && dtI.toLocaleDateString()}</p>
-                <p>{dtF && dtF.toLocaleDateString()}</p>
             </div>
-            <Table head={['Data', 'CPF', 'Funcionaria']} data={[['01/01/2025', '44960880880', 'bi6@medic.com.br']]} dtI={dtI} dtF={dtF}/>
+            <Table head={header} data={data} dtI={dtI} dtF={dtF}/>
         </div>
     )
 }

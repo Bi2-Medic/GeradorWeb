@@ -1,5 +1,5 @@
-import styles from '../styles/Delete.module.css'
-import deleteIcon from '../assets/trash.svg'
+import styles from '../../styles/Delete.module.css'
+import deleteIcon from '../../assets/trash.svg'
 
 function Delete({obj}){
 

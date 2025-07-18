@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, NavLink } from "react-router-dom";
-import { Home, Pedido, Produto, Tuss, Cage, Pacote, Regra } from "./pages";
+import { Home, Pedido, Produto, Tuss, Cage, Pacote, Regra } from "./components/pages";
 import styles from './styles/Menu.module.css'
 import { GiHealthNormal} from 'react-icons/gi';
 
